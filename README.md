@@ -1,1 +1,3 @@
 # Bug-Tracking-System
+The Bug Tracking System is a full-stack web application designed to help software teams efficiently manage and resolve bugs throughout the software development lifecycle. Built using Spring Boot (Java) for the backend and ReactJS for the frontend, the system offers a clean and intuitive interface for both Reporters (who log bugs) and Debuggers (who investigate and fix them). The application supports full CRUD operations, categorizes bugs into Open and Resolved, and maintains robust data persistence using an Oracle database.
+It features RESTful APIs, global exception handling, and real-time bug status updates—making it an essential tool for improving software quality and team collaboration.
