@@ -1,0 +1,76 @@
+/* src/Footer.css */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3d6e96;
+    color: #f2f2f2;
+    padding: 0.5rem 2rem;
+    margin-top: 50px;
+    height: 50px;
+    position: sticky;
+    bottom: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    position: sticky;
+    z-index: 200;
+    box-sizing: border-box;
+}
+
+.footer .right a {
+    color: white;
+    margin-left: 12px;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+.footer .right a:hover {
+    transform: scale(1.2);
+}
+
+/* Social media icons */
+.social-icons a {
+    margin-left: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Hover effect for icons */
+.social-icons a:hover {
+    transform: scale(1.2);
+    /* Slight zoom effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+        height: auto;
+        padding: 0.5rem;
+    }
+
+    .social-icons a {
+        margin: 0 0.3rem;
+    }
+
+    .footer p {
+        font-size: 1rem; /* Reduced for mobile */
+        margin-bottom: 0.3rem; /* Added spacing */
+    }
+}
+@media (max-width: 480px) {
+    .footer {
+        font-size: 0.9rem; /* Further reduced for small screens */
+    }
+    
+    .social-icons img {
+        width: 22px; /* Further reduced */
+        height: 22px;
+    }
+}

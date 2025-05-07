@@ -1,0 +1,175 @@
+
+.main {
+    min-height: 100vh;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    /* CHANGED: Added padding-top to shift content up */
+    padding-top: 30px; 
+}
+.contact-main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-containerr {
+    padding: 1.5rem;
+    background-color: #f2f2f2;
+    text-align: center;
+    width: 100%;
+    max-width: 1205px;
+    max-height: 1000px
+}
+
+.welcome-containerr h1 {
+    font-size: 2.5rem;
+    color: #3d6e96;
+    margin: 1.5rem 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Card container styling */
+.card-containerrr {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f2f2f2;
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 1205px;
+}
+
+/* Individual card design */
+.cardd {
+    background: #bce4f0;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 240px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* Image inside card */
+.card-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Text content in cards */
+.card-contentt, .card-contenttmap {
+    padding: 1rem;
+}
+
+.card-contentt h3, .card-contenttmap h3 {
+    font-size: 1.2rem;
+    color: #3d6e96;
+    margin-bottom: 0.8rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-contentt p {
+    font-size: 0.85rem;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 0.3rem 0;
+}
+
+
+/* Map Button */
+.map-btn {
+    background-color: #3d6e96;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+.map-btn:hover {
+    background-color: #2a4d6b;
+}
+
+/* Hover effect for card */
+.cardd:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .card-containerrr {
+        gap: 1.2rem;
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .cardd {
+        width: 220px;
+    }
+    
+    .card-image {
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .welcome-containerr h1 {
+        font-size: 2.2rem;
+    }
+    
+    .cardd {
+        width: 45%;
+        min-width: 200px;
+    }
+    
+    .card-contentt, .card-contenttmap {
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .welcome-containerr h1 {
+        font-size: 2rem;
+    }
+    
+    .cardd {
+        width: 100%;
+        max-width: 280px;
+    }
+    
+    .card-image {
+        height: 160px;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome-containerr h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-contentt h3, .card-contenttmap h3 {
+        font-size: 1.1rem;
+    }
+    
+    .card-contentt p {
+        font-size: 0.8rem;
+    }
+    
+    .map-btn {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}

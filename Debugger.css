@@ -1,0 +1,499 @@
+/* Base styles */
+.debugger-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    z-index: 0;
+}
+
+.sidebar {
+    background: linear-gradient(135deg, #e7f2fa);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    z-index: 100;
+    border-right: 1px solid #3d6e96;
+}
+
+.side-bar-button {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.sidebar button {
+    width: 130px;
+    padding: 8px 10px;
+    background: linear-gradient(145deg, #3d6e96, #2b4f70);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.sidebar button:hover::before {
+    left: 100%;
+}
+
+.sidebar button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(145deg, #4a7fab, #325b82);
+}
+
+.sidebar button:active {
+    transform: translateY(0);
+}
+
+.button-icon {
+    font-size: 16px;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.button-text {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar button:hover .button-icon {
+    transform: scale(1.1);
+}
+
+.debugger-page {
+    flex: 1;
+    padding: 15px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 150px;
+    box-sizing: border-box;
+}
+
+.header-new-x {
+    background-color: #3d6e96;
+    color: white;
+    padding: 8px 10px; /* Reduced header padding */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-family: serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 35px; /* Reduced header height */
+}
+
+.logo-2-x {
+    font-size: 0.9rem; /* Reduced logo size */
+}
+
+.logoutb {
+    padding: 5px 8px; /* Reduced logout button padding */
+    background-color: #e7f2fa;
+    color: rgb(35, 77, 112);
+    border: none;
+    border-radius: 3px;
+    font-size: 10px; /* Reduced font size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.logoutb:hover {
+    background-color: #d0e8f5;
+}
+
+.debugger-page h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.8rem; /* Reduced heading size */
+    text-align: center;
+    margin-top: 50px; /* Adjusted margin for smaller header */
+    margin-bottom: 20px; /* Adjusted margin */
+    color: #2c3e50;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px; /* Reduced padding */
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    margin-top: -10px;
+}
+
+.search-container input {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 180px; /* Reduced width */
+    font-size: 12px;
+}
+
+.search-container button {
+    padding: 6px 10px;
+    background-color: #3d6e96;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #2b4f70;
+}
+
+.search-error {
+    color: #dc3545;
+    margin-left: 8px;
+    font-size: 10px;
+}
+
+.bug-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller min width */
+    gap: 10px; /* Reduced gap */
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: 8px auto; /* Reduced margin */
+    padding: 8px; /* Reduced padding */
+}
+
+.bug-card {
+    background: linear-gradient(135deg, #fdfdfd, #e9effc);
+    padding: 0.4rem 0.6rem; /* Reduced card padding */
+    border-radius: 8px; /* Reduced border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Reduced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #3d6e96;
+    box-sizing: border-box;
+}
+
+.bug-card:hover {
+    transform: translateY(-3px); /* Reduced hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bug-card h3 {
+    font-size: 0.9rem; /* Reduced heading size */
+    margin-bottom: 4px;
+    color: #2d3436;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.bug-card p {
+    margin: 2px 0;
+    font-size: 0.7rem; /* Reduced font size */
+    color: #555;
+    line-height: 1.1; /* Further reduced line height */
+}
+
+.bug-card p strong {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.update-icon,
+.delete-icon {
+    font-size: 16px; /* Reduced icon size */
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.update-icon {
+    color: #28a745;
+}
+
+.update-icon:hover {
+    transform: scale(1.1);
+}
+
+.delete-icon {
+    color: #dc3545;
+}
+
+.delete-icon:hover {
+    transform: scale(1.1);
+}
+
+.spinner {
+    width: 30px; /* Reduced spinner size */
+    height: 30px; /* Reduced spinner size */
+    border: 3px solid #f3f3f3; /* Reduced border width */
+    border-top: 3px solid #007bff; /* Reduced border width */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-top: 20px; /* Reduced margin */
+    align-self: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Basic Footer Styling (assuming you have a .footer class) */
+.footer {
+    background-color: #3d6e96;
+    color: white;
+    text-align: center;
+    padding: 4px 8px; /* Reduced footer padding */
+    font-size: 0.6rem; /* Reduced font size */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets (min-width: 768px) */
+@media (min-width: 768px) {
+    .header-new-x {
+        height: 40px;
+        padding: 8px 12px;
+    }
+
+    .logo-2-x {
+        font-size: 1rem;
+    }
+
+    .logoutb {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .debugger-page h1 {
+        font-size: 2rem;
+        margin-top: 60px;
+        margin-bottom: 25px;
+    }
+
+    .bug-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .bug-card {
+        padding: 0.8rem 1.2rem;
+        border-radius: 12px;
+    }
+
+    .bug-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .bug-card p {
+        font-size: 0.9rem;
+        margin: 4px 0;
+    }
+
+    .update-icon,
+    .delete-icon {
+        font-size: 18px;
+    }
+
+    .search-container {
+        padding: 10px 15px;
+        margin-top: -15px;
+    }
+
+    .search-container input {
+        font-size: 14px;
+        padding: 8px 10px;
+        width: 220px;
+    }
+
+    .search-container button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .footer {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For larger desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .header-new-x {
+        height: 45px;
+        padding: 10px 15px;
+    }
+
+    .logo-2-x {
+        font-size: 1.1rem;
+    }
+
+    .logoutb {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .debugger-page h1 {
+        font-size: 2.4rem;
+        margin-top: 70px;
+        margin-bottom: 30px;
+    }
+
+    .bug-card-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .bug-card {
+        padding: 1rem 1.5rem;
+        border-radius: 15px;
+    }
+
+    .bug-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .bug-card p {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .update-icon,
+    .delete-icon {
+        font-size: 20px;
+    }
+
+    .search-container {
+        padding: 12px 18px;
+        margin-top: -20px;
+    }
+
+    .search-container input {
+        width: 250px;
+    }
+
+    .search-container button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+
+    .footer {
+        padding: 12px 18px;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile adjustments (max-width: 767px) */
+@media (max-width: 767px) {
+    .header-new-x {
+        height: 30px;
+        padding: 6px 10px;
+    }
+
+    .logo-2-x {
+        font-size: 0.8rem;
+    }
+
+    .logoutb {
+        font-size: 9px;
+        padding: 4px 6px;
+    }
+
+    .debugger-page h1 {
+        font-size: 1.4rem;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+
+    .bug-card-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .bug-card {
+        padding: 0.5rem 0.8rem;
+        border-radius: 8px;
+    }
+
+    .bug-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+    }
+
+    .bug-card p {
+        font-size: 0.7rem;
+        margin: 2px 0;
+        line-height: 1.1;
+    }
+
+    .update-icon,
+    .delete-icon {
+        font-size: 14px;
+    }
+
+    .search-container {
+        padding: 6px;
+        margin-top: -8px;
+    }
+
+    .search-container input {
+        font-size: 10px;
+        padding: 5px 7px;
+        width: 150px;
+    }
+
+    .search-container button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+
+    .footer {
+        padding: 6px 10px;
+        font-size: 0.7rem;
+    }
+}

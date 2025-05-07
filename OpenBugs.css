@@ -1,0 +1,131 @@
+/* Header Styles */
+.header-new {
+    background-color: #3d6e96;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    margin-right: 15px;
+}
+
+.back-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Page Content */
+.debugger-wrapper-2 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to right, #fdfdfd, #e9effc);
+}
+
+.openbugs-page {
+    flex: 1;
+    padding: 20px;
+}
+
+.heading-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.heading-row h2 {
+    color: #000000;
+    font-size: 2.3rem;
+    margin: 0;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Bug Cards */
+.bug-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bug-card {
+    background: linear-gradient(135deg, #fdfdfd, #e9effc);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 4px solid #3d6e96;
+}
+
+.bug-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.bug-card h3 {
+    margin-top: 0;
+    color: #3d6e96;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.bug-card p {
+    margin: 8px 0;
+    color: #555;
+}
+
+.bug-card p strong {
+    color: #3d6e96;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header-new {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .back-button {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .logo-2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .heading-row h2 {
+        font-size: 1.8rem;
+    }
+
+    .bug-card-container {
+        grid-template-columns: 1fr;
+    }
+}

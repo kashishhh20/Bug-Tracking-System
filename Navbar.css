@@ -1,0 +1,134 @@
+/* Navbar container */
+.navbar {
+    background-color: #3d6e96;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+/* Logo styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap; 
+
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Desktop navigation */
+.nav-links {
+    display: flex;
+    gap: 12px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 1.15rem;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    background-color: #5085ad;
+    transform: translateY(-2px);
+}
+
+/* Mobile menu button */
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* Mobile navigation menu */
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0 15px 0;
+    background-color: #3d6e96;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+.mobile-nav.open {
+    display: flex; /* Show the mobile nav when the 'open' class is added (via JavaScript) */
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.mobile-nav a:hover {
+    background-color: #5085ad;
+    transform: translateX(5px); 
+
+}
+
+/* Responsive rules */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 8px 15px; 
+    }
+    
+    .logo-text {
+        font-size: 16px; 
+    }
+    
+    .mobile-nav a {
+        font-size: 1rem; 
+        padding: 6px 15px; 
+    }
+}

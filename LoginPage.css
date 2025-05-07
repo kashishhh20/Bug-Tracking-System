@@ -1,0 +1,211 @@
+/* Container to center the login box vertically */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6f8;
+    background-color: #f2f2f2;
+    height: auto; 
+    min-height: 200px; 
+    width: 100%;
+    padding: 40px 0; 
+    margin-top: 50px;
+}
+
+
+/* Login box */
+.login-box {
+    background: #ffffff;
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    margin-top: 0;
+    margin: 20px;
+    
+}
+
+.signin h2 {
+    font-size: 28px;
+    margin: 0;
+    color: #3d6e96;
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+
+/* Title */
+/* .login-title {
+    font-size: 22px;
+
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+
+    margin-bottom: 20px;
+
+} */
+
+/* Form layout */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Input and select styling */
+.login-form input,
+.login-form select {
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+    border-color: #00e1ff;
+}
+
+/* Password container */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-container input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+/* Eye icon */
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+/* Button */
+.login-button {
+    background-color: #3d6e96;
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #779ea8;
+}
+
+/* Error message */
+.login-form p {
+    margin: 0;
+    font-size: 14px;
+    color: red;
+    font-weight: bold;
+}
+
+/* Optional: Add transition to input focus */
+input,
+select {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Tablets and small desktops */
+@media (max-width: 768px) {
+    .login-box {
+        width: 350px;
+        padding: 20px 30px; 
+    }
+    
+    .signin h2 {
+        font-size: 24px; 
+        margin-bottom: 25px;
+    }
+    
+    .login-form input,
+    .login-form select {
+        padding: 10px 12px; 
+        font-size: 15px; 
+    }
+    
+    .login-button {
+        padding: 10px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .login-container {
+        min-height: 400px; /* Reduced minimum height for mobile */
+        padding: 20px 0; /* Reduced padding for mobile */
+    }
+    
+    .login-box {
+        width: 90%; 
+        max-width: 320px; 
+        padding: 20px; 
+        margin: 20px auto; 
+    }
+    
+    .signin h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    
+    .login-form {
+        gap: 15px; 
+    }
+    
+    .login-form input,
+    .login-form select {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .eye-icon {
+        font-size: 16px; 
+        right: 10px;
+    }
+    
+    .login-button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+    .login-box {
+        padding: 15px;
+    }
+    
+    .signin h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    
+    .login-form input,
+    .login-form select {
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+    
+    .login-button {
+        font-size: 14px;
+    }
+    .login-container {
+        min-height: 350px; /* Further reduced for very small devices */
+    }
+}
